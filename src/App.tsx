@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { HashRouter} from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import { defaultTheme } from './styles/theme/defaultTheme'
@@ -14,11 +14,13 @@ interface taskType{
 export default function App() {
   const [toDoList, setToDoList] = useState<taskType[]>([] as taskType[]);
 
-  setToDoList([
-    ...toDoList, 
-    {isCompleted: false, taskDescription: "Testing Testing Testing"},
-    {isCompleted: false, taskDescription: "Debug Debug Debug Debug"}
-  ]);
+  useEffect(() => {
+    setToDoList([
+      ...toDoList, 
+      {isCompleted: false, taskDescription: "Testing Testing Testing"},
+      {isCompleted: false, taskDescription: "Debug Debug Debug Debug"}
+    ]);
+  }, [])
 
   return (
     <ThemeProvider theme={defaultTheme}>
