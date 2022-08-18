@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { HashRouter} from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
-import { defaultTheme } from '../styles/theme/defaultTheme'
-import { GlobalStyle } from '../styles/global'
+import { defaultTheme } from './styles/theme/defaultTheme'
+import { GlobalStyle } from './styles/global'
 import { Router} from '../Router'
+import { Header } from './components/Header/Header'
 
 export default function App() {
   return (
@@ -15,4 +16,3 @@ export default function App() {
     </ThemeProvider>
   )
 }
-
