@@ -32,7 +32,9 @@ export function Task(props: TaskProps) {
           onChange={() => handleCheckTask()}
         />
         <span id="custom-checkbox">
-          <Check size={12} color="#fafafa" weight="fill" />
+          {props.task.isCompleted && (
+            <Check size={12} color="#fafafa" weight="fill" />
+          )}
         </span>
       </CheckBoxContainer>
       <p className={props.task.isCompleted ? "task-completed" : undefined}>
