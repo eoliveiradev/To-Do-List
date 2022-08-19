@@ -29,7 +29,6 @@ export const TaskContainer = styled.div`
 `
 
 export const CheckBoxContainer = styled.label`
-
   input{
     position: absolute;
     width: 0px;
@@ -83,9 +82,10 @@ export const DeleteTaskButton = styled.button`
   justify-content: center;
   align-items: center;
 
-  background: none;
   border: none;
-  outline: none;
+  border-radius: 4px;
+
+  background: none;
 
   #trash-icon{
     color: ${props => props.theme["colors"]["base-colors"]["gray-300"]};

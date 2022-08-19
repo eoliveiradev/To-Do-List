@@ -29,7 +29,7 @@ export function Task(props: TaskProps) {
         <input
           type="checkbox"
           checked={props.task.isCompleted}
-          onClick={() => handleCheckTask()}
+          onChange={() => handleCheckTask()}
         />
         <span id="custom-checkbox">
           <Check size={12} color="#fafafa" weight="fill" />
