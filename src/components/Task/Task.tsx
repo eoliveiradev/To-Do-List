@@ -23,9 +23,20 @@ export function Task(props: TaskProps) {
     setToDoList(newToDoList)
   }
 
+  function handleKeyDown(event: React.KeyboardEvent<HTMLLabelElement>){
+    const keys = {
+      "Enter": () => handleCheckTask()
+    }
+    if (Object.keys(keys).includes(event.key)) {
+      keys[event.key as keyof typeof keys]()
+    }
+  }
+
   return (
     <TaskContainer>
-      <CheckBoxContainer>
+      <CheckBoxContainer 
+        onKeyDown={(e) => handleKeyDown(e)}
+      >
         <input
           type="checkbox"
           checked={props.task.isCompleted}
