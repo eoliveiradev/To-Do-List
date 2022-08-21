@@ -1,6 +1,7 @@
 import { toDoListContext } from "../../App";
 import { FinishedTasks, TaskCounterContainer, TasksCreated } from "./styles";
 import { useContext, useEffect, useState } from "react";
+
 export function TaskCounter() {
   const { toDoList} = useContext(toDoListContext)
   const [ numberOfCreatedTaks, setNumberOfCreatedTaks ] = useState(0)
