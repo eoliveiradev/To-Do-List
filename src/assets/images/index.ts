@@ -1,3 +1,3 @@
 import {default as Logo} from "./Logo.svg";
-
-export { Logo };
+import {default as PlusSign} from "./PlusSign.svg";
+export { Logo, PlusSign };
