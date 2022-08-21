@@ -37,11 +37,18 @@ export const NewTaskInput = styled.input`
 `
 
 export const CreateNewTaskButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
   width: 90px;
   height: 52px;
 
   padding: 16px;
 
+  font-size: 0.875rem;
+  font-weight: 700;
   color: ${props => props.theme["colors"]["base-colors"]["gray-100"]};
 
   border: 1px solid transparent;
@@ -54,7 +61,6 @@ export const CreateNewTaskButton = styled.button`
   &:hover, &:focus{
     &:not(:disabled){
       background-color: ${props => props.theme["colors"]["brand-colors"]["blue"]};
-      filter: drop-shadow(0 0 6px ${props => props.theme["colors"]["brand-colors"]["purple"]});
     }
   }
 

@@ -1,6 +1,7 @@
 import { useContext, useRef, useState } from "react"
 import { TaskType, toDoListContext } from "../../App"
 import { CreateNewTaskButton, CreateTaskContainer, NewTaskInput } from "./styles"
+import { PlusSign } from "../../assets/images"
 
 export function CreateTask(){
   const { toDoList, setToDoList } = useContext(toDoListContext)
@@ -51,6 +52,7 @@ export function CreateTask(){
         onClick={() => handleCreateNewTask()}
       >
         Criar
+        <img src={PlusSign} alt="Sinal de adição"/>
       </CreateNewTaskButton>
     </CreateTaskContainer>
   )
