@@ -24,6 +24,7 @@ export const TaskContainer = styled.div`
 
     &.task-completed{
       text-decoration: line-through;
+      color: ${props => props.theme["colors"]["base-colors"]["gray-300"]};
     }
   }
 `
