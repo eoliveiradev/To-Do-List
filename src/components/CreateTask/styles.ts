@@ -8,7 +8,7 @@ export const CreateTaskContainer = styled.div`
 `
 
 export const NewTaskInput = styled.input`
-  flex: 1;
+  width: 100%;
   height: 54px;
 
   border: 1px solid ${props => props.theme["colors"]["base-colors"]["gray-700"]};

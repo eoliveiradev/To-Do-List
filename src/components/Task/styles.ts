@@ -13,6 +13,7 @@ export const TaskContainer = styled.div`
   padding: 16px;
 
   border: 1px solid ${props => props.theme["colors"]["base-colors"]["gray-400"]};
+  border-radius: 8px;
 
   background-color: ${props => props.theme["colors"]["base-colors"]["gray-500"]};
 
