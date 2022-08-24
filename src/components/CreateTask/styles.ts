@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const CreateTaskContainer = styled.div`
   display: flex;
+  justify-items: center;
   gap: 8px;
   width: 100%;
   min-height: 54px;
