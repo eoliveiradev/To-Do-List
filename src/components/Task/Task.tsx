@@ -1,14 +1,15 @@
 import { CheckBoxContainer, DeleteTaskButton, TaskContainer } from "./styles";
-import { TaskType, toDoListContext } from "../../App"
 import { Check, Trash } from "phosphor-react";
 import { useContext } from "react";
+import { ToDoListContext } from "../../contexts/ToDoListContext";
+import { TaskType } from "../../App";
 
 interface TaskProps {
   task: TaskType;
 }
 
 export function Task(props: TaskProps) {
-  const { toDoList, setToDoList } = useContext(toDoListContext)
+  const { toDoList, setToDoList } = useContext(ToDoListContext)
 
   let newToDoList = [...toDoList]
   const taskIndex = toDoList.findIndex(item => item.id === props.task.id)

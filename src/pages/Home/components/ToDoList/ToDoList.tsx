@@ -1,13 +1,13 @@
 import { ClipboardText } from "phosphor-react";
 import { useContext } from "react";
-import { TaskType, toDoListContext } from "../../../../App";
 import { CreateTask } from "../../../../components/CreateTask/CreateTask";
 import { Task } from "../../../../components/Task/Task";
 import { TaskCounter } from "../../../../components/TaskCounter/TaskCounter";
+import { ToDoListContext } from "../../../../contexts/ToDoListContext";
 import { NoTaskRegistered, TaskList, ToDoListContainer } from "./styles";
 
 export function ToDoList() {
-  const { toDoList } = useContext(toDoListContext);
+  const { toDoList } = useContext(ToDoListContext);
   
   return (
     <ToDoListContainer>

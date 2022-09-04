@@ -1,10 +1,12 @@
 import { useContext, useRef, useState } from "react"
-import { TaskType, toDoListContext } from "../../App"
+
 import { CreateNewTaskButton, CreateTaskContainer, NewTaskInput } from "./styles"
 import { PlusSign } from "../../assets/images"
+import { ToDoListContext } from "../../contexts/ToDoListContext"
+import { TaskType } from "../../App"
 
 export function CreateTask(){
-  const { toDoList, setToDoList } = useContext(toDoListContext)
+  const { toDoList, setToDoList } = useContext(ToDoListContext)
   const [newTaskContent, setNewTaskContent] = useState("")
 
   const newTaskInput = useRef<HTMLInputElement>(null)
